@@ -1,0 +1,21 @@
+---
+- name: Python Setup
+  hosts: all
+  become: yes
+  gather_facts: True
+  tasks:
+    - name: Update repositories cache and install Python package for Debian or Ubuntu
+      apt:
+        name: python
+        update_cache: yes
+      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+    - name: Update repositories cache and install Python package for CentOS or RHEL
+      yum:
+        name: python
+        state: latest
+      when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+    - name: Fetch Python version
+      shell: python --version 2>&1
+      register: python_version
+    - debug:
+        msg: "Python version: {{ python_version.stdout }}"
