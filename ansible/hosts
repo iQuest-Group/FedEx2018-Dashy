@@ -5,4 +5,3 @@
 ansible_connection=ssh
 ansible_user=iquest
 ansible_ssh_pass=Pa$$w0rq
-ansible_python_interpreter=/usr/local/bin/python

@@ -24,7 +24,8 @@
     },
     "include": [
         "src/main/webapp/app",
-        "src/test/javascript/"
+        "src/test/javascript/",
+        "src/main/webapp/environments/environment.ts"
     ],
     "exclude": [
         "node_modules"

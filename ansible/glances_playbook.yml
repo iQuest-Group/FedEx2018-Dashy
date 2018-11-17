@@ -14,7 +14,7 @@
       yum:
         name: python-pip
         state: latest
+    - name: Install glances
+      shell: /usr/local/bin/pip install bottle glances
     - name: Start glances server in the background
-      shell: pip install glances
-    - name: Start glances server in the background
-      shell: nohup glances -w -p 8083 </dev/null >/dev/null 2>&1 &
+      shell: nohup /usr/local/python/bin/glances -w -p 8083 </dev/null >/dev/null 2>&1 &

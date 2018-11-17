@@ -15,7 +15,7 @@
         state: latest
       when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
     - name: Fetch Python version
-      shell: python --version 2>&1
+      shell: "python --version 2>&1 | awk '{print $2}'"
       register: python_version
     - debug:
         msg: "Python version: {{ python_version.stdout }}"

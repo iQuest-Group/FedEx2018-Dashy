@@ -1,12 +1,13 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { DashySharedModule } from 'app/shared';
-import { HOME_ROUTE, HomeComponent } from './';
+import { HOME_ROUTE, HomeComponent, HomeService } from './';
 
 @NgModule({
     imports: [DashySharedModule, RouterModule.forChild([HOME_ROUTE])],
     declarations: [HomeComponent],
+    providers: [HomeService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DashyHomeModule {}
