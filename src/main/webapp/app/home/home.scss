@@ -1,13 +1,26 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
+$CARD_SIZE: 15rem;
 
-.hipster {
+.card {
+    font-family: sans-serif;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+}
+
+.service-title {
     display: inline-block;
-    width: 347px;
-    height: 497px;
-    background: url('../../content/images/hipster.png') no-repeat center top;
-    background-size: contain;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.service-card {
+    min-width: $CARD_SIZE;
+    min-height: $CARD_SIZE;
+    max-width: $CARD_SIZE;
+    max-height: $CARD_SIZE;
+    cursor: pointer;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
@@ -16,8 +29,4 @@ Main page styles
     only screen and (-o-min-device-pixel-ratio: 2/1),
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
-    .hipster {
-        background: url('../../content/images/hipster2x.png') no-repeat center top;
-        background-size: contain;
-    }
 }

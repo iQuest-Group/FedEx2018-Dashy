@@ -1,0 +1,7 @@
+[web01]
+10.83.16.21
+
+[web01:vars]
+ansible_connection=ssh
+ansible_user=iquest
+ansible_ssh_pass=Pa$$w0rq

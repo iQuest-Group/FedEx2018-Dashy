@@ -4,8 +4,7 @@
             <fa-icon icon="bars"></fa-icon>
         </a>
         <a class="navbar-brand logo float-left" routerLink="/" (click)="collapseNavbar()">
-            <span class="logo-img"></span>
-            <span class="navbar-title">Dashy</span> <span class="navbar-version">{{version}}</span>
+            <span class="navbar-title">Dashy</span> <span class="navbar-version"></span>
         </a>
     </div>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="isAuthenticated()">
