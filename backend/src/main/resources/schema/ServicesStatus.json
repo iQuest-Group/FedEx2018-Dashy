@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://com.iquestgroup.dashy/v1.0",
+  "title": "Dashy API JSON Schema",
+  "description": "Defines the Dashy API",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "description": "status of one service",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "type": "object"
+}

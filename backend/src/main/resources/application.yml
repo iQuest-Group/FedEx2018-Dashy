@@ -1,0 +1,16 @@
+spring:
+    application:
+        name: dashy
+
+
+server:
+    port: 8090
+    servlet:
+        context-path: /dashy
+    compression:
+        enabled: true
+
+
+management:
+    security:
+        enabled: false
